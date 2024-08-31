@@ -1,0 +1,88 @@
+<br>
+<div class="container">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="max-height: 600px; overflow: hidden; ">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="object-fit: cover; height: 100%;" src="https://picsum.photos/600
+        " class="d-block w-100" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img style="object-fit: cover; height: 100%;" src="https://picsum.photos/id/2/600
+        " class="d-block w-100" alt="Imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img style="object-fit: cover; height: 100%;" src="https://picsum.photos/id/7/600
+        " class="d-block w-100" alt="Imagen 3">
+      </div>
+      <div class="carousel-item">
+        <img style="object-fit: cover; height: 100%;" src="https://picsum.photos/id/10/600
+        " class="d-block w-100" alt="Imagen 4">
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+  
+  
+</div>
+
+<div class="container mt-4">
+  <h2>Municipios</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">RUT</th>
+        <th scope="col">Código</th>
+        <th scope="col">Nombre Municipalidad</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let municipio of municipios">
+        <td>{{ municipio.RUT_MNC }}</td>
+        <td>{{ municipio.ID_CMN }}</td>
+        <td>{{ municipio.RZN_SCL_MNC }}</td>
+        <td>{{ municipio.DIR_MNC }}</td>
+        
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="openEditModal(municipio)">
+            <i class="bi bi-pencil-square"></i> Modificar
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="openDeleteModal(municipio)">
+            <i class="bi bi-trash"></i> Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <footer class="py-5">
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    </div>
+    <div class="row">    
+          
+        <h5>Datos de contacto</h5>
+        <p>Nombre: Manuel Gatica</p>
+        <p>Correo: mgatica.lira27&#64;gmail.com</p>
+        <p>Número: +569 50472215</p>
+        
+    </div>
+  </footer>
+</div>
